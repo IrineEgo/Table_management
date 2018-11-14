@@ -46,74 +46,74 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-	<meta charset="utf-8">
-    <title>Таблицы и базы данных</title>
-	<link rel="stylesheet" href=" ./style.css">
+     <meta charset="utf-8">
+     <title>Таблицы и базы данных</title>
+     <link rel="stylesheet" href=" ./style.css">
   </head>
   <body>
-	<header>
-	    <h1 class="title">Таблицы БД</h1>
-	</header>
+    <header>
+      <h1 class="title">Таблицы БД</h1>
+    </header>
     <section>
-			<div class="tables">
-			  <h4>Доступные таблицы</h4>
-				<ul class="show-tables">
-					<?php foreach ($stmtTables as $rowTables) { ?>
-						<li>
-							<a class="table-name" href="?table=<?php echo htmlspecialchars($rowTables[0]); ?>">
-								<?php echo htmlspecialchars($rowTables[0]); ?>
-							</a>
-						</li>
-					<?php } ?>
-				</ul>
-				<form class="create-table" method="POST">
-					<h4>Новая таблица БД</h4>
-					<input class="table-new" type="text" name="table_name" placeholder="имя таблицы">
-					<input type="submit" name="create_table" value="Создать таблицу">
-				</form>
-			</div>
+      <div class="tables">
+        <h4>Доступные таблицы</h4>
+		<ul class="show-tables">
+		    <?php foreach ($stmtTables as $rowTables) { ?>
+		    <li>
+			  <a class="table-name" href="?table=<?php echo htmlspecialchars($rowTables[0]); ?>">
+			    <?php echo htmlspecialchars($rowTables[0]); ?>
+			  </a>
+		    </li>
+			    <?php } ?>
+		</ul>
+		<form class="create-table" method="POST">
+		  <h4>Новая таблица БД</h4>
+			<input class="table-new" type="text" name="table_name" placeholder="имя таблицы">
+			<input type="submit" name="create_table" value="Создать таблицу">
+		</form>
+      </div>
 
-      <?php if (!empty($_GET['table'])) { ?>
-			<form class="field-operation" method="POST">
-				<table class="table">
-					<tr>
-						<th></th>
-						<th>Field</th>
-						<th>Type</th>
-						<th>Null</th>
-						<th>Key</th>
-						<th>Default</th>
-						<th>Extra</th>
-					</tr>
+        <?php if (!empty($_GET['table'])) { ?>
+	    <form class="field-operation" method="POST">
+	      <table class="table">
+	        <tr>
+	          <th></th>
+	           <th>Field</th>
+	           <th>Type</th>
+	           <th>Null</th>
+	           <th>Key</th>
+	           <th>Default</th>
+	           <th>Extra</th>
+	        </tr>
 
-					<?php while ($rowTable = $stmtTable->fetch(PDO::FETCH_ASSOC)) { ?>
-					<tr>
-						<td>
-							<input type="radio" name="name_field" value="<?php echo htmlspecialchars($rowTable['Field']); ?>" value="">
-						</td>	
-						<td><?php echo htmlspecialchars($rowTable['Field']); ?></td>
-						<td><?php echo htmlspecialchars($rowTable['Type']); ?></td>
-						<td><?php echo htmlspecialchars($rowTable['Null']); ?></td>
-						<td><?php echo htmlspecialchars($rowTable['Key']); ?></td>
-						<td><?php echo htmlspecialchars($rowTable['Default']); ?></td>
-						<td><?php echo htmlspecialchars($rowTable['Extra']); ?></td>				
-					</tr>
-					<?php } ?>
-				</table>
-				<div class="field-operation-bar">
-					<input class="name-field-new" type="text" name="name_field_new" placeholder="имя поля">
-					<input class="typeofdata" type="text" name="typeofdata" placeholder="тип данных">
-					<input class="add" type="submit" name="add" value="добавить">
-					<input class="change" type="submit" name="change" value="изменить">
-					<input class="delete" type="submit" name="delete" value="удалить">				
-				</div>
-				<input class="reset" type="reset">
-			</form>
-			<?php } ?>
+	        <?php while ($rowTable = $stmtTable->fetch(PDO::FETCH_ASSOC)) { ?>
+	        <tr>
+		      <td>
+		        <input type="radio" name="name_field" value="<?php echo htmlspecialchars($rowTable['Field']); ?>" value="">
+		      </td>	
+		      <td><?php echo htmlspecialchars($rowTable['Field']); ?></td>
+		      <td><?php echo htmlspecialchars($rowTable['Type']); ?></td>
+		      <td><?php echo htmlspecialchars($rowTable['Null']); ?></td>
+		      <td><?php echo htmlspecialchars($rowTable['Key']); ?></td>
+		      <td><?php echo htmlspecialchars($rowTable['Default']); ?></td>
+		      <td><?php echo htmlspecialchars($rowTable['Extra']); ?></td>				
+	        </tr>
+		        <?php } ?>
+	      </table>
+	      <div class="field-operation-bar">
+	        <input class="name-field-new" type="text" name="name_field_new" placeholder="имя поля">
+	        <input class="typeofdata" type="text" name="typeofdata" placeholder="тип данных">
+	        <input class="add" type="submit" name="add" value="добавить">
+	        <input class="change" type="submit" name="change" value="изменить">
+	        <input class="delete" type="submit" name="delete" value="удалить">				
+	      </div>
+	        <input class="reset" type="reset">
+	   </form>
+	          <?php } ?>
             
-            <div class="wrap">
-              <a href=" ./index.php" class="logo">&laquo; Перейти на главную</a>
-            </div>      
-		</section>
-	</body>
+          <div class="wrap">
+            <a href=" ./index.php" class="logo">&laquo; Перейти на главную</a>
+          </div>      
+	</section>
+  </body>
 </html>
