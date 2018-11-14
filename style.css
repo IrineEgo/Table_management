@@ -1,0 +1,144 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+  width: 400px;
+  margin: 50px auto;
+  display: inline-block;
+  background-color: #FFFBD6;
+  line-height: 75px;
+  text-align: center;
+  font-weight: 600;
+}
+
+h2 {
+  color: maroon;
+  text-align: center;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrap {
+  text-align: right;
+}
+
+.table-index {
+  border-collapse: collapse;
+  width: 900px;
+  margin: auto;
+}
+
+.title {
+  width: 100%;
+  margin: 0;
+  background-color: #778899;
+  color: white;
+  line-height: 75px;
+  text-align: center;
+}
+
+.show-tables {
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: maroon;
+  font-weight: bold;
+}
+
+a:active {
+  color: maroon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+}
+
+.tables {
+  display: inline-block;
+  width: 300px;
+  margin: 10px 0;
+  vertical-align: top;
+}
+
+.tables h4 {
+  display: block;
+  margin: 0;
+  text-align: center;
+  background-color: #778899;
+  color: white;
+  line-height: 30px;
+}
+
+.table-name {
+  width: 170px;
+  color: black;
+}
+
+.table-new {
+  width: 150px;
+  margin: 20px 5px;  
+}
+
+.create-table {
+  float: right;
+  width: 300px;
+  margin: 20px 0;
+  border: 1px solid #778899;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 700px;
+}
+
+th {
+  background: #778899;
+  color: white;
+  border: 1px solid white;
+  padding: 0 5px;	
+}
+
+td {
+  padding: 0 5px;
+  border: 1px solid #778899;
+}
+
+.field-operation {
+  display: inline-block;
+  margin: 10px 0 20px 70px;
+}
+
+.field-operation-bar {
+  margin: 20px 0 10px 0;
+}
+
+.name-field-new, .typeofdata {
+  width: 200px;
+}
+
+.reset {
+  width: 150px;
+  height: 26px;
+}
